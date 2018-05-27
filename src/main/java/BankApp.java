@@ -30,9 +30,9 @@ public class BankApp {
 		System.out.println("Press 3 to check your balance");
 		System.out.println("Press 4 to close an account");
 		System.out.println("Press 5 to exit");
-		String menuOption = input.nextLine();
+		String MenuOption = input.nextLine();
 		
-		while(choice != 5) {
+		while(choice !=5) {
 			if(choice == 1);
 			System.out.println("You want to deposit");
 			System.out.println("Here are your accounts");
@@ -51,7 +51,7 @@ public class BankApp {
 		    
 		    menuOption();
 		
-		} else  if (choice == 4) {
+		}  if (choice == 4) {
 			System.out.println("You would like to close an account");
 			System.out.println("Here are your accounts");
 			for (BankAccount current : myBank.getAllAccounts()) {
@@ -83,7 +83,7 @@ public class BankApp {
 		System.out.println("Press 3 to check your balance");
 		System.out.println("Press 4 to close an account");
 		System.out.println("Press 5 to exit");
-		String menuOption = input.nextLine();
+		String MenuOptions = input.nextLine();
 		
 	}
 
