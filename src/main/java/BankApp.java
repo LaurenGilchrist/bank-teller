@@ -4,6 +4,7 @@ public class BankApp {
 
 	static int choice;
 	static Scanner input = new Scanner(System.in);
+	private static String accountNum;
 	
 	public static void main(String[] args) {
 		
@@ -33,7 +34,7 @@ public class BankApp {
 		String MenuOption = input.nextLine();
 		
 		while(choice !=5) {
-			if(choice == 1);
+			if(choice == 1);{
 			System.out.println("You want to deposit");
 			System.out.println("Here are your accounts");
 			for(BankAccount current: myBank.getAllAccounts()) {
@@ -47,6 +48,40 @@ public class BankApp {
 		    System.out.println("Enter the amount to deposit: ");
 		    int amount = input.nextInt();
 		    myBank.add(accountNum, amount);
+		    System.out.println("Your current balance is " + myBank.findAccount(accountNum).getBalance());
+		    
+		    menuOption();
+		    
+			} if(choice == 2);{
+		    System.out.println("You want to make a withdraw");
+		    System.out.println("Which account do you want to withdraw from");
+		    for(BankAccount current: myBank.getAllAccounts()) {
+		    	System.out.println(current.getAccountNumber() + " " + current.getType() + " " + current.getBalance());
+		    }
+		    
+		    System.out.println("Select the account by (account number) to perform this transaction");
+		    int amount = input.nextInt();
+		    System.out.println("You have selected " + accountNum);
+		    System.out.println("Enter the amount to withdraw: ");
+		    int withdraw = input.nextInt();
+		    myBank.add(accountNum, withdraw);
+		    System.out.println("Your current balance is " + myBank.findAccount(accountNum).getBalance());
+		    
+		    menuOption();
+		    
+		}if(choice == 3);{
+		    System.out.println("To check your balance");
+		    System.out.println("Which account do you want to chek");
+		    for(BankAccount current: myBank.getAllAccounts()) {
+		    	System.out.println(current.getAccountNumber() + " " + current.getType() + " " + current.getBalance());
+		    }
+		    
+		    System.out.println("Select the account by (account number) to perform this transaction");
+		    accountNum = input.nextLine();
+		    System.out.println("You have selected " + accountNum);
+		    System.out.println("Your balance it ");
+		    int balance = input.nextInt();
+		    myBank.add(accountNum, balance);
 		    System.out.println("Your current balance is " + myBank.findAccount(accountNum).getBalance());
 		    
 		    menuOption();
@@ -73,7 +108,7 @@ public class BankApp {
 			
 		}
 	}
-
+	}
 
 	private static void menuOption() {
 		System.out.println("What would you like to do?");
