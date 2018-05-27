@@ -45,9 +45,9 @@ public class BankApp {
 		    Long accountNum = input.nextLong();
 		    System.out.println("You have selected " + accountNum);
 		    System.out.println("Enter the amount to deposit: ");
-		    int amount = input.nextInt();
-		    myBank.getAccountNum(accountNum).deposit(amount);
-		    System.out.println("Your current balance is " + myBank.getAccountNum(accountNum).getBalance());
+		    double amount = input.nextDouble();
+		    myBank.getBankAccount().deposit(amount);
+		    System.out.println("Your current balance is " + myBank.getAccountNumber().getBalance());
 		    
 		   
 

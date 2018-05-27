@@ -27,7 +27,7 @@ public class BankAccount {
 		
 	}
 
-	public void deposit(int amount) {
+	public void deposit(double amount) {
 		balance += amount;
 
 		
@@ -42,6 +42,11 @@ public class BankAccount {
 	public Object getDeposit() {
 		
 		return balance;
+	}
+
+	public static BankAccount get(BankAccount bankAccount) {
+		
+		return bankAccount;
 	}
 
 	

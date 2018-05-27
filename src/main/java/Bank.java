@@ -38,12 +38,12 @@ public class Bank {
 
 	public BankAccount accounts() {
 		
-		return accounts();
+		return accounts.get(getAccountNumber());
 	}
 
 	public BankAccount getBankAccount() {
 		
-		return getBankAccount();
+		return accounts.get(getAccountNumber());
 	}
 
 	public BankAccount getAccountNumber() {
