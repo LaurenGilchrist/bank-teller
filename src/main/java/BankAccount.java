@@ -27,7 +27,7 @@ public class BankAccount {
 		
 	}
 
-	public void deposit(double amount) {
+	public void deposit(int amount) {
 		balance += amount;
 
 		

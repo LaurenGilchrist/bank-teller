@@ -61,8 +61,23 @@ public class Bank {
 		return getbalance();
 	}
 
+	public void closeAccount() {
+		
+		 accounts.remove(getAccountNumber());
+		
+	}
+
+	public void closeAccount(int accountNumber) {
+
+         accounts.remove(getAccountNumber());
+		
+	}
+
 	
 	}
+
+	
+	
 
 	
 	
